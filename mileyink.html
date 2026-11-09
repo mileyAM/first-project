@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MileyInk | Custom Tattoos. Bold Ideas. | MILEYM3DIA</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- MileyInk Sub-Brand Header -->
+  <nav class="navbar" style="border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
+    <div class="container nav-container">
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <a href="mileyink.html" class="logo-brand" style="letter-spacing: 0.08em;">
+          MILEY<span style="color: var(--neon-lime);">INK</span>
+        </a>
+        <a href="index.html" class="tag-badge" style="margin-bottom: 0; font-size: 0.7rem; border-color: rgba(255,255,255,0.2); color: #fff;">
+          ← MILEYM3DIA ECOSYSTEM
+        </a>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="mileyink.html" class="nav-link active">Home</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="#about-artist" class="nav-link">About</a></li>
+        <li><a href="#aftercare" class="nav-link">Aftercare</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="amm-sounz.html" class="nav-link" style="color: var(--neon-cyan);">Music / AMM ↗</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="#booking" onclick="openModal('bookingModal')" class="btn btn-primary btn-sm">Book Session</a>
+        <button class="mobile-menu-btn" aria-label="Toggle navigation">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer">
+    <ul class="mobile-nav-links">
+      <li><a href="mileyink.html" class="active">Home</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#about-artist">About</a></li>
+      <li><a href="#aftercare">Aftercare</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="amm-sounz.html" class="text-cyan">AMM Sounz (Music &amp; Audio) ↗</a></li>
+      <li><a href="index.html" class="text-lime">MILEYM3DIA Home ↗</a></li>
+    </ul>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="section-padding" style="padding-top: 4.5rem; padding-bottom: 4rem;">
+    <div class="container">
+      <div class="grid-2" style="align-items: center; gap: 3.5rem;">
+        
+        <div>
+          <div class="tag-badge">TATTOO STUDIO &amp; FINE ART</div>
+          <h1 class="hero-title">
+            CUSTOM TATTOOS.<br>
+            <span class="text-lime">BOLD IDEAS.</span>
+          </h1>
+          <p class="hero-subtitle">
+            MileyInk — where art meets skin.
+          </p>
+          <p class="hero-desc">
+            Specializing in high-contrast black &amp; grey, custom gothic lettering, dark surrealism, and bespoke neo-traditional designs. Built on precision, sterility, and uncompromising vision.
+          </p>
+
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <button onclick="openModal('bookingModal')" class="btn btn-primary">
+              Book Consultation
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+            <a href="#gallery" class="btn btn-secondary">Explore Gallery</a>
+          </div>
+        </div>
+
+        <div style="position: relative;">
+          <div style="border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border-subtle); position: relative; box-shadow: 0 20px 50px rgba(0,0,0,0.6);">
+            <!-- Doodle Crown SVG -->
+            <svg class="doodle-crown" style="top: -15px; left: 25px; width: 64px; height: 48px;" viewBox="0 0 64 48">
+              <path d="M6 38 L14 12 L28 26 L48 8 L54 38 Z" fill="none" stroke="#d4ff00" stroke-width="3.5" stroke-linejoin="round"/>
+            </svg>
+
+            <img src="assets/images/tattoo-art.jpg" alt="MileyInk Tattoo Art" style="width: 100%; height: 480px; object-fit: cover;">
+            <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(8,8,11,0.1) 0%, rgba(8,8,11,0.85) 100%);"></div>
+
+            <div style="position: absolute; bottom: 2rem; right: 2rem; z-index: 10;">
+              <div class="neon-stamp" style="font-size: 0.95rem;">
+                <span>M3</span>
+                <span style="font-size: 0.75rem;">MILEYINK</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery & Sections Matching Mockup (4 Cards) -->
+  <section id="gallery" class="section-padding" style="background: #09090d; border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <span class="card-tag">PORTFOLIO</span>
+          <h2 class="section-title">THE WORK</h2>
+        </div>
+        <button onclick="openModal('bookingModal')" class="btn btn-primary btn-sm">Request Custom Flash</button>
+      </div>
+
+      <div class="grid-4">
+        <!-- Card 1: Gallery -->
+        <div class="card" onclick="showToast('Loading full high-res photo gallery...')" style="cursor: pointer;">
+          <div class="card-media">
+            <img src="assets/images/tattoo-studio.jpg" alt="Gallery">
+          </div>
+          <div class="card-tag">Artworks</div>
+          <h3 class="card-title">Gallery</h3>
+          <p class="card-desc">Black &amp; grey realism, custom lettering, sleeves, and back pieces.</p>
+        </div>
+
+        <!-- Card 2: About the Artist -->
+        <div class="card" id="about-artist">
+          <div class="card-media">
+            <img src="assets/images/creator-portrait.jpg" alt="About">
+          </div>
+          <div class="card-tag">Artist</div>
+          <h3 class="card-title">About the Artist</h3>
+          <p class="card-desc">Over a decade translating raw street culture and fine art onto skin.</p>
+        </div>
+
+        <!-- Card 3: Aftercare Protocol -->
+        <div class="card" id="aftercare">
+          <div class="card-media">
+            <img src="assets/images/tattoo-art.jpg" alt="Aftercare">
+          </div>
+          <div class="card-tag">Healing</div>
+          <h3 class="card-title">Aftercare Protocol</h3>
+          <p class="card-desc">Saniderm instructions and daily wash routines for maximum saturation.</p>
+        </div>
+
+        <!-- Card 4: Contact & Studio Info -->
+        <div class="card" id="contact" onclick="openModal('bookingModal')" style="cursor: pointer;">
+          <div class="card-media">
+            <div style="background: #11111a; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; position: relative;">
+              <span class="font-display" style="font-size: 2.2rem; font-weight: 800; color: var(--neon-lime);">
+                INK ME
+              </span>
+            </div>
+          </div>
+          <div class="card-tag">Studio Direct</div>
+          <h3 class="card-title">Contact &amp; Booking</h3>
+          <p class="card-desc">Private appointment bookings in Telford, PA | Bucks County studio.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking Modal -->
+  <div class="modal-overlay" id="bookingModal">
+    <div class="modal-card">
+      <button class="modal-close" onclick="closeModal('bookingModal')">&times;</button>
+      <span class="card-tag">PRIVATE CONSULTATION</span>
+      <h2 class="section-title" style="font-size: 1.8rem; margin: 0.5rem 0 1rem 0;">Book With MileyInk</h2>
+      <form onsubmit="event.preventDefault(); showToast('Tattoo inquiry transmitted! We will reach out with availability.'); closeModal('bookingModal');">
+        <div class="form-group">
+          <label class="form-label">Your Name *</label>
+          <input type="text" class="form-control" placeholder="Alex Rivera" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email Address *</label>
+          <input type="email" class="form-control" placeholder="name@domain.com" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Placement &amp; Approximate Size</label>
+          <input type="text" class="form-control" placeholder="e.g. Forearm, 6x4 inches" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Concept / Description</label>
+          <textarea class="form-control" placeholder="Describe the idea, reference styles, lettering words, etc." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
+          Send Tattoo Booking Request
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand-row">
+          <a href="index.html" class="logo-brand" style="font-size: 1.6rem;">
+            MILEY<span class="accent">M3</span>DIA &bull; <span style="color: var(--neon-lime);">MILEYINK</span>
+          </a>
+          <ul class="footer-links">
+            <li><a href="index.html">Main Studio</a></li>
+            <li><a href="mileyink.html">MileyInk</a></li>
+            <li><a href="amm-sounz.html">AMM Sounz</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 MileyInk / MILEYM3DIA. All rights reserved.</div>
+        <div>Telford, PA | Bucks County Studio</div>
+        <div style="font-family: var(--font-display); letter-spacing: 0.1em; color: var(--neon-lime);">
+          CUSTOM TATTOOS. BOLD IDEAS.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
