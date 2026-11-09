@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login &amp; Register | MILEYM3DIA</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo-brand">
+        MILEY<span class="accent">M3</span>DIA
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+        <li><a href="resources.html" class="nav-link">Resources</a></li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="hub.html" class="btn btn-primary btn-sm desktop-only">Creator Hub</a>
+        <a href="login.html" class="btn btn-secondary btn-sm desktop-only active">Log In</a>
+        <button class="mobile-menu-btn" aria-label="Toggle navigation">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer">
+    <ul class="mobile-nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="hub.html" class="text-lime">Creators Hub ⚡</a></li>
+      <li><a href="login.html" class="active">Member Log In</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Auth Section -->
+  <section class="section-padding" style="padding-top: 5rem; padding-bottom: 5rem;">
+    <div class="container" style="max-width: 960px;">
+      
+      <div class="grid-2" style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); overflow: hidden; box-shadow: 0 25px 60px rgba(0,0,0,0.7); position: relative;">
+        
+        <!-- Left Box: Welcome Back (Login) -->
+        <div style="padding: 3rem 2.5rem;" id="loginPane">
+          <div class="tag-badge">MEMBER PORTAL</div>
+          <h2 class="section-title" style="font-size: 2rem; margin-bottom: 0.5rem;">Welcome Back</h2>
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem;">
+            Log in to your account and continue your journey.
+          </p>
+
+          <form id="loginForm" onsubmit="handleLoginSubmit(event)">
+            <div class="form-group">
+              <label class="form-label" for="loginEmail">Username or Email</label>
+              <input type="text" id="loginEmail" class="form-control" value="andrew@mileym3dia.com" required>
+            </div>
+
+            <div class="form-group">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.45rem;">
+                <label class="form-label" for="loginPassword" style="margin-bottom: 0;">Password</label>
+                <a href="#forgot" onclick="showToast('Password reset link sent to registered email.'); return false;" style="font-size: 0.78rem; color: var(--neon-lime);">Forgot password?</a>
+              </div>
+              <input type="password" id="loginPassword" class="form-control" value="••••••••••••" required>
+            </div>
+
+            <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1.5rem; font-size: 0.85rem; color: var(--text-muted);">
+              <input type="checkbox" id="rememberMe" checked style="accent-color: var(--neon-lime);">
+              <label for="rememberMe" style="cursor: pointer;">Remember Me</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; margin-bottom: 1rem;">
+              Log In
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+
+            <!-- 1-Click Demo Shortcut -->
+            <div style="margin-top: 1rem; text-align: center;">
+              <a href="creator-lab.html" class="btn btn-secondary btn-sm" style="width: 100%; border-color: rgba(212,255,0,0.3);">
+                ⚡ Direct Access: Enter Andrew's Creator Lab
+              </a>
+            </div>
+          </form>
+        </div>
+
+        <!-- Vertical Divider on desktop, Horizontal on mobile -->
+        <div style="background: linear-gradient(180deg, #181825 0%, #101018 100%); border-left: 1px solid var(--border-subtle); padding: 3rem 2.5rem; display: flex; flex-direction: column; justify-content: center; position: relative;">
+          
+          <!-- Doodle Crown Graphic -->
+          <svg class="doodle-crown" style="top: 25px; right: 25px; width: 64px; height: 48px;" viewBox="0 0 64 48">
+            <path d="M6 38 L14 12 L28 26 L48 8 L54 38 Z" fill="none" stroke="#d4ff00" stroke-width="3.5" stroke-linejoin="round"/>
+          </svg>
+
+          <span class="card-tag">NEW MEMBER</span>
+          <h2 class="section-title" style="font-size: 2rem; margin-bottom: 0.75rem;">New Here?</h2>
+          <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6; margin-bottom: 2rem;">
+            Create an account and get instant access to exclusive downloads, raw production stems, member workshops, and the private Discord community.
+          </p>
+
+          <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 1.25rem; margin-bottom: 2rem;">
+            <ul style="list-style: none; font-size: 0.85rem; color: #a1a1aa; line-height: 1.8;">
+              <li>✓ Free access to 3D LUTs &amp; Motion Assets</li>
+              <li>✓ Full Access to Creator Lab Dashboard</li>
+              <li>✓ Weekly project breakdowns &amp; AMA sessions</li>
+            </ul>
+          </div>
+
+          <button class="btn btn-outline-lime" onclick="toggleAuthForm()" style="width: 100%;">
+            Register Account
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Register Modal / Form Toggle -->
+  <div class="modal-overlay" id="registerModal">
+    <div class="modal-card">
+      <button class="modal-close" onclick="closeModal('registerModal')">&times;</button>
+      <span class="card-tag">JOIN THE HUB</span>
+      <h2 class="section-title" style="font-size: 1.7rem; margin: 0.5rem 0 1rem 0;">Create Your Account</h2>
+      <form onsubmit="handleRegisterSubmit(event)">
+        <div class="form-group">
+          <label class="form-label">Full Name</label>
+          <input type="text" class="form-control" placeholder="Andrew Miley" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email Address</label>
+          <input type="email" class="form-control" placeholder="name@domain.com" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Password</label>
+          <input type="password" class="form-control" placeholder="At least 8 characters" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Creative Discipline</label>
+          <select class="form-control">
+            <option>Video Editor / Director</option>
+            <option>Music Producer / Audio Engineer</option>
+            <option>Brand & Graphic Designer</option>
+            <option>Tattoo & Visual Artist</option>
+            <option>Content Creator</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
+          Complete Registration &amp; Enter Lab
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand-row">
+          <a href="index.html" class="logo-brand" style="font-size: 1.6rem;">
+            MILEY<span class="accent">M3</span>DIA
+          </a>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 MILEYM3DIA. All rights reserved.</div>
+        <div><a href="mailto:hello@mileym3dia.com">hello@mileym3dia.com</a></div>
+        <div style="font-family: var(--font-display); letter-spacing: 0.1em; color: var(--neon-lime);">
+          CREATE. CAPTURE. ELEVATE.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    function handleLoginSubmit(e) {
+      e.preventDefault();
+      showToast('Authenticating with MILEYM3DIA Vault...');
+      setTimeout(() => {
+        window.location.href = 'creator-lab.html';
+      }, 700);
+    }
+
+    function toggleAuthForm() {
+      openModal('registerModal');
+    }
+
+    function handleRegisterSubmit(e) {
+      e.preventDefault();
+      showToast('Account created! Welcome to the Creator Lab.');
+      closeModal('registerModal');
+      setTimeout(() => {
+        window.location.href = 'creator-lab.html';
+      }, 700);
+    }
+
+    // Check if ?tab=register passed in URL
+    if (new URLSearchParams(window.location.search).get('tab') === 'register') {
+      setTimeout(() => { openModal('registerModal'); }, 200);
+    }
+  </script>
+</body>
+</html>
