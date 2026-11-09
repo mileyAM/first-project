@@ -64,6 +64,18 @@
       "created_at": "2026-11-09T00:41:44.007Z",
       "sender": "macOS",
       "is_cancelled": false
+    },
+    {
+      "id": "50c7c8f3-f41e-4cfb-93eb-f3ad9fe795ef",
+      "role": "user",
+      "content": "I attached images: .antigravity/uploads/photo-1794184158-1.jpg, .antigravity/uploads/photo-1794184236-2.jpg.\n\nYes, I have a bunch of edits. I have to do what is the easiest way to do that",
+      "status": "pending",
+      "model": "gemini-3.8-flash-high",
+      "client_type": "gemini-bridge",
+      "parent_message_id": null,
+      "created_at": "2026-11-09T00:46:28.591Z",
+      "sender": "ios",
+      "is_cancelled": false
     }
   ]
 }
