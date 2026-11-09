@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | MILEYM3DIA Creative Studio</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo-brand">
+        MILEY<span class="accent">M3</span>DIA
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
+        <li><a href="resources.html" class="nav-link">Resources</a></li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="hub.html" class="btn btn-primary btn-sm desktop-only">Creator Hub</a>
+        <a href="login.html" class="btn btn-secondary btn-sm desktop-only">Log In</a>
+        <button class="mobile-menu-btn" aria-label="Toggle navigation">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer">
+    <ul class="mobile-nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html" class="active">Portfolio</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="hub.html" class="text-lime">Creators Hub ⚡</a></li>
+      <li><a href="login.html">Member Log In</a></li>
+    </ul>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="section-padding" style="padding-top: 4rem; padding-bottom: 2.5rem;">
+    <div class="container">
+      <div style="max-width: 780px;">
+        <div class="tag-badge">OUR WORK</div>
+        <h1 class="hero-title">
+          REAL PROJECTS.<br>
+          REAL STORIES.<br>
+          <span class="text-lime">REAL WORK.</span>
+        </h1>
+        <p class="hero-subtitle">
+          A collection of creative work across branding, video, web, and digital.
+        </p>
+        <p class="hero-desc">
+          Each project tells a distinct story, engineered to evoke raw emotion, establish undeniable authority, and leave a permanent mark.
+        </p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="filter-bar" id="portfolioFilterBar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="branding">Branding</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="video">Video</button>
+        <button class="filter-btn" data-filter="social">Social</button>
+        <button class="filter-btn" data-filter="audio">Audio</button>
+        <button class="filter-btn" data-filter="tools">Tools</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Grid -->
+  <section style="padding-bottom: 5rem;">
+    <div class="container">
+      <div class="grid-3" id="portfolioGrid" style="gap: 2rem;">
+        
+        <!-- 1. MILEYM3DIA (Branding) -->
+        <div class="card portfolio-item" data-category="branding" onclick="openProjectModal('mileym3dia')">
+          <div class="card-media">
+            <img src="assets/images/creator-portrait.jpg" alt="MILEYM3DIA">
+          </div>
+          <div class="card-tag">Branding</div>
+          <h3 class="card-title">MILEYM3DIA</h3>
+          <p class="card-desc">Comprehensive visual identity and brand redesign for the studio.</p>
+        </div>
+
+        <!-- 2. Concrete Owl (Video / Music Visuals) -->
+        <div class="card portfolio-item" data-category="video" onclick="openProjectModal('concrete-owl')">
+          <div class="card-media">
+            <img src="assets/images/concrete-owl.jpg" alt="Concrete Owl">
+          </div>
+          <div class="card-tag">Music Visuals</div>
+          <h3 class="card-title">Concrete Owl</h3>
+          <p class="card-desc">Audio-reactive 3D graphics and futuristic stage visuals.</p>
+        </div>
+
+        <!-- 3. The Journey (Video) -->
+        <div class="card portfolio-item" data-category="video" onclick="openProjectModal('the-journey')">
+          <div class="card-media">
+            <img src="assets/images/the-journey.jpg" alt="The Journey">
+          </div>
+          <div class="card-tag">Music Video</div>
+          <h3 class="card-title">The Journey</h3>
+          <p class="card-desc">Cinematic documentary short film and artist visual record.</p>
+        </div>
+
+        <!-- 4. M3 Brand Identity (Branding) -->
+        <div class="card portfolio-item" data-category="branding" onclick="openProjectModal('m3-brand')">
+          <div class="card-media">
+            <img src="assets/images/brand-campaign.jpg" alt="M3 Brand Identity">
+          </div>
+          <div class="card-tag">Branding</div>
+          <h3 class="card-title">M3 Brand Identity</h3>
+          <p class="card-desc">Streetwear apparel branding, vector typography, and lookbook.</p>
+        </div>
+
+        <!-- 5. Neon Nights (Social Media) -->
+        <div class="card portfolio-item" data-category="social" onclick="openProjectModal('neon-nights')">
+          <div class="card-media">
+            <img src="assets/images/neon-nights.jpg" alt="Neon Nights">
+          </div>
+          <div class="card-tag">Social Media</div>
+          <h3 class="card-title">Neon Nights</h3>
+          <p class="card-desc">Viral 30-day teaser campaign and motion poster series.</p>
+        </div>
+
+        <!-- 6. Audio Spectrum (Audio) -->
+        <div class="card portfolio-item" data-category="audio" onclick="openProjectModal('audio-spectrum')">
+          <div class="card-media">
+            <img src="assets/images/audio-spectrum.jpg" alt="Audio Spectrum">
+          </div>
+          <div class="card-tag">Audio</div>
+          <h3 class="card-title">Audio Spectrum</h3>
+          <p class="card-desc">Custom sonic logo and EP stem mastering by AMM Sounz.</p>
+        </div>
+
+        <!-- 7. Apex Cyberwear (Web) -->
+        <div class="card portfolio-item" data-category="web" onclick="openProjectModal('apex-cyberwear')">
+          <div class="card-media">
+            <img src="assets/images/web-design.jpg" alt="Apex Cyberwear">
+          </div>
+          <div class="card-tag">Web Design &amp; Dev</div>
+          <h3 class="card-title">Apex Cyberwear</h3>
+          <p class="card-desc">High-speed headless e-commerce storefront for underground streetwear.</p>
+        </div>
+
+        <!-- 8. Creator OS Toolkit (Tools) -->
+        <div class="card portfolio-item" data-category="tools" onclick="openProjectModal('creator-os')">
+          <div class="card-media">
+            <img src="assets/images/creators-lab.jpg" alt="Creator OS Toolkit">
+          </div>
+          <div class="card-tag">Digital Tools</div>
+          <h3 class="card-title">Creator OS Toolkit</h3>
+          <p class="card-desc">Automated Notion client dashboard and project pipeline for freelancers.</p>
+        </div>
+
+      </div>
+
+      <!-- Creative Brief Template CTA Card -->
+      <div style="margin-top: 4rem; background: #111119; border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 3rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 2rem; position: relative; overflow: hidden;">
+        <div>
+          <span class="card-tag">FREE RESOURCE</span>
+          <h2 class="section-title" style="margin-bottom: 0.75rem;">Creative Brief Template</h2>
+          <p class="hero-desc" style="margin-bottom: 1.5rem; max-width: 520px;">
+            The exact intake brief we use at MILEYM3DIA to align vision, deliverables, budget, and creative direction before starting any project.
+          </p>
+          <a href="#download" onclick="triggerBriefDownload(event)" class="btn btn-primary">
+            Download Template (PDF / Notion)
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+          </a>
+        </div>
+
+        <div>
+          <div style="width: 140px; height: 140px; border-radius: 50%; border: 2px dashed var(--neon-lime); display: flex; align-items: center; justify-content: center; position: relative;">
+            <span class="font-display" style="font-size: 2.8rem; font-weight: 800; color: #fff;">
+              M<span class="text-lime">3</span>
+            </span>
+            <svg class="doodle-crown" style="top: 15px; left: calc(50% - 25px); width: 50px; height: 35px;" viewBox="0 0 64 48">
+              <path d="M6 38 L14 12 L28 26 L48 8 L54 38 Z" fill="none" stroke="#d4ff00" stroke-width="3"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Study Details Modal -->
+  <div class="modal-overlay" id="projectModal">
+    <div class="modal-card">
+      <button class="modal-close" onclick="closeModal('projectModal')">&times;</button>
+      <div id="modalContent">
+        <!-- Injected via portfolio.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand-row">
+          <a href="index.html" class="logo-brand" style="font-size: 1.6rem;">
+            MILEY<span class="accent">M3</span>DIA
+          </a>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <div class="footer-socials">
+            <a href="https://instagram.com" target="_blank" class="social-circle"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a>
+            <a href="https://twitter.com" target="_blank" class="social-circle"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l11.733 16h4.267l-11.733 -16z"/><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/></svg></a>
+            <a href="https://youtube.com" target="_blank" class="social-circle"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><polygon points="10 15 15 12 10 9"/></svg></a>
+            <a href="https://tiktok.com" target="_blank" class="social-circle"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 MILEYM3DIA. All rights reserved.</div>
+        <div><a href="mailto:hello@mileym3dia.com">hello@mileym3dia.com</a></div>
+        <div style="font-family: var(--font-display); letter-spacing: 0.1em; color: var(--neon-lime);">
+          CREATE. CAPTURE. ELEVATE.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/portfolio.js"></script>
+</body>
+</html>
